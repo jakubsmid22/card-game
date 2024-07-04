@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="left-section">
+        <div class="cards" id="player1-cards">
+          <div class="cards-num">20</div>
+          <div class="cards-top-section">
+            <div class="symbol">A</div>
+            <img
+              src="/Heart.png"
+              draggable="false"
+              alt="heart-icon"
+              class="color"
+            />
+          </div>
+          <div class="cards-middle-section">
+            <img
+              src="/Heart.png"
+              class="big-symbol"
+              draggable="false"
+              alt="heart-symbol"
+            />
+          </div>
+          <div class="cards-bottom-section">
+            <img
+              src="/Heart.png"
+              alt="heart-icon"
+              draggable="false"
+              class="color color-bottom"
+            />
+            <div class="symbol">A</div>
+          </div>
+        </div>
+        <div class="cards" id="player2-cards">
+          <div class="cards-num">20</div>
+          <div class="cards-top-section">
+            <div class="symbol">A</div>
+            <img
+              src="/Heart.png"
+              draggable="false"
+              alt="heart-icon"
+              class="color"
+            />
+          </div>
+          <div class="cards-middle-section">
+            <img
+              src="/Heart.png"
+              class="big-symbol"
+              draggable="false"
+              alt="heart-symbol"
+            />
+          </div>
+          <div class="cards-bottom-section">
+            <img
+              src="/Heart.png"
+              alt="heart-icon"
+              draggable="false"
+              class="color color-bottom"
+            />
+            <div class="symbol">A</div>
+          </div>
+        </div>
+      </div>
+      <div class="middle-section">
+        <div id="winner"></div>
+        <div><button class="place-card-btn">NEXT CARD</button></div>
+      </div>
+      <div class="right-section">
+        <div class="cards hide" id="player1-card">
+            <div class="cards-top-section">
+              <div class="symbol">A</div>
+              <img
+                src="/Heart.png"
+                draggable="false"
+                alt="heart-icon"
+                class="color"
+              />
+            </div>
+            <div class="cards-middle-section">
+              <img
+                src="/Heart.png"
+                class="big-symbol"
+                draggable="false"
+                alt="heart-symbol"
+              />
+            </div>
+            <div class="cards-bottom-section">
+              <img
+                src="/Heart.png"
+                alt="heart-icon"
+                draggable="false"
+                class="color color-bottom"
+              />
+              <div class="symbol">A</div>
+            </div>
+          </div>
+          <div class="cards hide" id="player2-card">
+            <div class="cards-top-section">
+              <div class="symbol">A</div>
+              <img
+                src="/Heart.png"
+                draggable="false"
+                alt="heart-icon"
+                class="color"
+              />
+            </div>
+            <div class="cards-middle-section">
+              <img
+                src="/Heart.png"
+                class="big-symbol"
+                draggable="false"
+                alt="heart-symbol"
+              />
+            </div>
+            <div class="cards-bottom-section">
+              <img
+                src="/Heart.png"
+                alt="heart-icon"
+                draggable="false"
+                class="color color-bottom"
+              />
+              <div class="symbol">A</div>
+            </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <ol>
+        <li>
+          <strong>Card Distribution:</strong>
+          <ol>
+            <li>
+              Each player (Player 1 and Player 2) starts with 20 cards, randomly selected from a deck containing values (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K) and suits (hearts, diamonds, clubs, spades).
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>Playing Cards:</strong>
+          <ol>
+            <li>
+              The game begins by pressing the <strong>"NEXT CARD"</strong> button.
+            </li>
+            <li>
+              Each player reveals one card from their deck and places it on the table.
+            </li>
+            <li>
+              The suits of the cards are hearts (Heart.png), diamonds (diamond.png), clubs (club.png), and spades (spade.png).
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>Determining the Round Winner:</strong>
+          <ol>
+            <li>
+              If one player has a heart card and the other does not, the player with the heart wins the round and takes all the cards on the table.
+            </li>
+            <li>
+              If both players have a heart card or neither player has a heart card, the round continues without a winner.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>Round Evaluation:</strong>
+          <ol>
+            <li>
+              The cards used in the round are removed from the players' decks.
+            </li>
+            <li>
+              After determining the round winner, the remaining number of cards is displayed for each player.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>End of the Game:</strong>
+          <ol>
+            <li>
+              The game ends when one player has no cards left.
+            </li>
+            <li>
+              The player with remaining cards is declared the winner.
+            </li>
+            <li>
+              If both players run out of cards simultaneously, the game ends in a draw.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>Restarting the Game:</strong>
+          <ol>
+            <li>
+              After the game ends, it can be restarted by pressing the <strong>"RESTART"</strong> button.
+            </li>
+            <li>
+              On restart, the cards are randomly redistributed, and the game begins anew.
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
